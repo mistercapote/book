@@ -600,8 +600,6 @@ def lfDV : DV → Term → Term → Term → LF
 -- No caso dos quantificadores, o primeiro argumento é a **restrição** e o
 -- segundo o **escopo**.
 
--- lfDET : DET → (Term → LF) → (Term → LF) → LF
-
 -- A tradução dos determinantes precisa ser feita com algum cuidado, porque
 -- envolve construir uma forma lógica em que uma variável fica ligada. Para
 -- garantir a ligação correta, temos de nos assegurar de que a variável
@@ -776,7 +774,7 @@ def lf3 : LF :=
 -- 4. Every boy admired a girl that no wizard helped.
 
 -- Os teoremas conferem que cada árvore devolve a sentença certa. Depois
--- disso, `#eval lfSent tr1` exibe a forma lógica da primeira.
+-- disso, `#eval toString (lfSent tr1)` exibe a forma lógica da primeira.
 
 def tr1 : Sent :=
   sorry
